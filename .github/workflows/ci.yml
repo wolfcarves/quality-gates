@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: Continues Integration Pipeline
 
 on:
   push:

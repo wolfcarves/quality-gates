@@ -32,25 +32,25 @@ import { AppRoutingModule } from './app-routing.module';
     HomeModule,
     AuthModule,
     Angulartics2Module.forRoot(),
-    AppRoutingModule // must be imported as the last module as it contains the fallback route
+    AppRoutingModule, // must be imported as the last module as it contains the fallback route
   ],
   declarations: [AppComponent],
   providers: [
     {
-        provide: HTTP_INTERCEPTORS,
-        useClass: ApiPrefixInterceptor,
-        multi: true
-      },
-      {
-        provide: HTTP_INTERCEPTORS,
-        useClass: ErrorHandlerInterceptor,
-        multi: true
-      },
-      {
-        provide: RouteReuseStrategy,
-        useClass: RouteReusableStrategy
-      },
+      provide: HTTP_INTERCEPTORS,
+      useClass: ApiPrefixInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorHandlerInterceptor,
+      multi: true,
+    },
+    {
+      provide: RouteReuseStrategy,
+      useClass: RouteReusableStrategy,
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

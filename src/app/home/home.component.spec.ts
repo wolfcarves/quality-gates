@@ -16,19 +16,18 @@ describe('HomeComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-        imports: [
-          BrowserAnimationsModule,
-          FlexLayoutModule,
-          MaterialModule,
-          RouterTestingModule,
-          Angulartics2Module.forRoot(),
-          SharedModule,
-          HttpClientTestingModule
-        ],
-        declarations: [HomeComponent],
-        providers: [QuoteService]
-      })
-      .compileComponents();
+      imports: [
+        BrowserAnimationsModule,
+        FlexLayoutModule,
+        MaterialModule,
+        RouterTestingModule,
+        Angulartics2Module.forRoot(),
+        SharedModule,
+        HttpClientTestingModule,
+      ],
+      declarations: [HomeComponent],
+      providers: [QuoteService],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

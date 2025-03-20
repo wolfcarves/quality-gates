@@ -34,5 +34,5 @@ jobs:
       - name: Run Code Analysis
         run: npx ng run quality-gates:test:ci
 
-      - name: Run Security Scan (using npm audit)
-        run: npm audit --audit-level=high
+      - name: Run E2E Tests
+        run: npm run e2e

@@ -35,7 +35,7 @@ jobs:
         run: npx ng run quality-gates:test:ci
 
       - name: Run E2E Tests
-        run: npm run test:e2e
+        run: npm run e2e
 
       - name: Build Project
         run: npm run build
